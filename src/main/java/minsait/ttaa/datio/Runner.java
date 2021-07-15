@@ -1,5 +1,6 @@
 package minsait.ttaa.datio;
 
+import minsait.ttaa.datio.common.pathfile.PathFile;
 import minsait.ttaa.datio.engine.Transformer;
 import org.apache.spark.sql.SparkSession;
 
@@ -12,6 +13,7 @@ public class Runner {
             .getOrCreate();
 
     public static void main(String[] args) {
-        Transformer engine = new Transformer(spark);
+        PathFile path= new PathFile();
+        Transformer engine = new Transformer(spark,path);
     }
 }
